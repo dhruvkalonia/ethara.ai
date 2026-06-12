@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+frontend/dist/
+
+# Build
+backend/target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
