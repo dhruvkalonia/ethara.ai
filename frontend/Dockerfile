@@ -6,6 +6,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:1.27-alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
+ENV BACKEND_URL=https://ethara-ai-1-qq4s.onrender.com
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
