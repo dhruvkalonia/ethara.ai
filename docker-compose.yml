@@ -13,6 +13,7 @@ services:
     build: ./frontend
     container_name: experiencehub-frontend
     environment:
+      NGINX_ENVSUBST_FILTER: BACKEND_URL
       BACKEND_URL: http://backend:8080
     ports:
       - "3000:80"
